@@ -46,7 +46,7 @@ class ONLSTM(Layer):
             name='kernel',
             initializer='glorot_uniform')
         self.recurrent_kernel = self.add_weight(
-            shape=(input_dim, self.units * 4 + self.levels * 2),
+            shape=(self.units, self.units * 4 + self.levels * 2),
             name='recurrent_kernel',
             initializer='orthogonal')
         self.bias = self.add_weight(
